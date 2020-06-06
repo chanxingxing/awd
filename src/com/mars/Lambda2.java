@@ -20,6 +20,7 @@ public class Lambda2 {
         test();
     }
 
+
     public static void test(){
         Consumer<String> co = (x) ->{
           System.out.println(x);
