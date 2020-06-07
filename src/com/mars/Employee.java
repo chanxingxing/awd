@@ -1,9 +1,12 @@
 package com.mars;
 
+import java.util.Objects;
+
 public class Employee {
     private String name;
     private Integer age;
     private Integer salary;
+    private Status status;
 
     public Employee() {
     }
@@ -16,6 +19,9 @@ public class Employee {
         this.name = name;
         this.age = age;
         this.salary = salary;
+    }
+
+    public Employee(String mars, int age, int salary, Status free) {
     }
 
     public String getName() {
@@ -42,6 +48,47 @@ public class Employee {
         this.salary = salary;
     }
 
+    public Status getStatus() {
+        return status;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return name.equals(employee.name) &&
+                age.equals(employee.age) &&
+                salary.equals(employee.salary) &&
+                status.equals(employee.status);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, salary, status);
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public Employee(String name, Integer age, Integer salary, Status status) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -50,4 +97,5 @@ public class Employee {
                 ", salary=" + salary +
                 '}';
     }
+
 }
