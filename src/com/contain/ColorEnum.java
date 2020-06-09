@@ -3,7 +3,7 @@ package com.contain;
 public enum ColorEnum implements IExceptionEnum {
     FREE("101", "找不到资源"),
     GREEN("102", "类异常"),
-    BLUE("103", "都是"),
+    BLUE("103", "都是")
     ;
 
     private String code;

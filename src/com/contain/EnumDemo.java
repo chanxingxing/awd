@@ -23,7 +23,7 @@ public class EnumDemo {
                 "james","curry","mars"
         );
         if (stringList.size()>2){
-            System.out.println(ColorEnum.GREEN.getMsg());
+            System.out.println(ColorEnum.BLUE.getMsg());
         }
     }
 }
